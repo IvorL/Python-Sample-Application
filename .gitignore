@@ -1,3 +1,4 @@
+cookbooks
 *.pyc
 *.egg-info
 .coverage

@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/ubuntu/python-app":{"guestpath":"/home/ubuntu/python-app","hostpath":"/Users/tech-a38x/Coursework/Project-UberApp/Python-Sample-Application","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/tech-a38x/Coursework/Project-UberApp/Python-Sample-Application","disabled":false,"__vagrantfile":true}}}
