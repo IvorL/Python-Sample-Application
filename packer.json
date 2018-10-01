@@ -36,6 +36,10 @@
       "type": "file",
       "source": "./",
       "destination": "/home/ubuntu/python-app"
+    },
+    {
+      "type": "shell",
+      "inline": ["cd /home/ubuntu/python-app" , "sudo pip install -r requirements.txt"]
     }
   ]
 }
