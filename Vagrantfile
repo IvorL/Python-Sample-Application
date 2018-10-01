@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
     uber_app.vm.synced_folder("./", "/home/ubuntu/python-app")
     # Provision the VM with python and pip (python package manager) using Chef
     uber_app.vm.provision("chef_solo") do |chef|
-      chef.add_recipe("python::default")
+      chef.add_recipe("Python::default")
       chef.add_recipe("nginx::default")
     end
     uber_app.vm.provision("shell", inline: install_requirements_file, privileged: false)
