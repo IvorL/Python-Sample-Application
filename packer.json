@@ -26,7 +26,7 @@
     {
       "type": "chef-solo",
       "cookbook_paths": ["./cookbooks"],
-      "run_list": ["Python::default", "nginx::default"]
+      "run_list": ["python::default", "nginx::default"]
     },
     {
       "type": "shell",
