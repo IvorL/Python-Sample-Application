@@ -21,6 +21,15 @@ def set_variables(variables)
   HEREDOC
 end
 
+def install_requirements_file
+  command = ""
+  command += <<~HEREDOC
+  cd /home/ubuntu/python-app
+  HEREDOC
+  command += <<~HEREDOC
+  pip install -r ./requirements.txt
+  HEREDOC
+end
 
 Vagrant.configure("2") do |config|
   # Define uber_app VM
@@ -35,11 +44,9 @@ Vagrant.configure("2") do |config|
     uber_app.vm.synced_folder("./", "/home/ubuntu/python-app")
     # Provision the VM with python and pip (python package manager) using Chef
     uber_app.vm.provision("chef_solo") do |chef|
-      chef.add_recipe("PythonCookBook::default")
+      chef.add_recipe("python::default")
+      chef.add_recipe("nginx::default")
     end
-    # Provision the VM with nginx
-    uber_app.vm.provision("chef_solo") do |chef|
-      chef.add_recipe("NginxCookBook::default")
-    end
+    uber_app.vm.provision("shell", inline: install_requirements_file, privileged: false)
   end
 end

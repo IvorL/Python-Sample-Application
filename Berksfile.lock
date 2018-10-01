@@ -1,11 +1,11 @@
 DEPENDENCIES
-  Python
-    git: git@github.com:IvorL/PythonCookBook.git
-    revision: 5570adcd22952cc19a477b6c0563f6d3b3f7de29
   nginx
     git: git@github.com:IvorL/NginxCookBook.git
     revision: 9936958464645275195ce7bdb8aa56494b4026f6
+  python
+    git: git@github.com:IvorL/PythonCookBook.git
+    revision: 3be66c72dad85ec732b826ad884cc67ef431fd41
 
 GRAPH
-  Python (0.1.0)
   nginx (0.1.0)
+  python (0.1.0)
